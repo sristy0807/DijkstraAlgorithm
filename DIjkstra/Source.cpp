@@ -37,7 +37,6 @@ void initialiseDistance() {
 }
 
 void Dijkstra() {
-	cout << "pq size " << pq.size() << endl;
 	while (!pq.empty()) {
 		int current_dist = -pq.top().first;
 		int current_node = pq.top().second;
@@ -72,13 +71,11 @@ void output() {
 
 int main() {
 	freopen("input.txt", "r", stdin);
-	cout << "buildGraph..." << endl;
+
 	readInputs();
 	buildGraph();
 	initialiseDistance();
 	Dijkstra();
 
-	cout << "initialiseDistance..." << endl;
-	cout << "Dijkstra..." << endl;
 	output();
 }
